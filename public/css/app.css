@@ -1,0 +1,117 @@
+html, body {
+    height: 100%;
+}
+
+.content-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.custom-footer {
+    background-color: #90969c; 
+    color: #ffffff;          
+}
+
+.text-rose {
+    color: #FF66CC; 
+}
+
+@media (min-width: 768px) {
+    .custom-margin {
+        margin-right: 500px !important;
+    }
+}
+
+.dropdown-list {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-list li {
+    padding: 8px;
+    list-style: none;
+}
+
+.dropdown-list li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown-list li a:hover {
+    background-color: #f0f0f0;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* Adjust for desired vertical position */
+    right: 20px; /* Adjust for desired horizontal position */
+    width: 50px;
+    height: 50px;
+    background-color: #6a6868; /* Dark grey */
+    border-radius: 50%; /* Makes it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially not visible */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+
+.back-to-top .arrow-up {
+    font-size: 24px; /* Size of the arrow */
+    color: #fff; /* White arrow color */
+    font-weight: bold;
+}
+
+.back-to-top:hover {
+    background-color: #444; /* Slightly lighter on hover */
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 575.98px) {
+    .pagination-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .pagination {
+        white-space: nowrap;
+    }
+}
+
+/* For larger screens, keep the "Showing X to Y of Z" on the left and pagination on the right */
+@media (min-width: 576px) {
+    .d-flex.justify-content-between {
+        display: flex;
+        justify-content: space-between; /* Ensures items are spaced out with text on the left and pagination on the right */
+        align-items: center;
+    }
+
+    .pagination-container {
+        display: flex;
+        justify-content: flex-end; /* Align pagination to the right */
+    }
+}
